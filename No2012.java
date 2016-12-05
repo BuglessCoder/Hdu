@@ -10,6 +10,7 @@ public class No2012 {
 		while(sc.hasNextInt()){
 			int x = sc.nextInt();
 			int y = sc.nextInt();
+			boolean flag = true;
 			int sum = 0;
 			if((x==0)&&(y==0)){
 				System.exit(0); 
@@ -20,11 +21,11 @@ public class No2012 {
 	                x=y;  
 	                y=temp;  
 	            }  
-				boolean flag = true;
+				
 				for(int i=x;i<=y;i++){
 					sum = i*i+i+41;
-					for(int j=2;j<i;j++){
-						if(i%j==0){
+					for(int j=2;j<=Math.sqrt(sum);j++){
+						if(sum%j==0){
 							flag = false;
 						}
 					}
